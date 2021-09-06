@@ -57,8 +57,9 @@ MIDDLEWARE = [
 # CACHE_MIDDLEWARE_SECONDS = 30
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'unique-snowflake',
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/home/darshan/Job/PractiseProject/perSiteCache/cache',
+        
     }
 }
 
