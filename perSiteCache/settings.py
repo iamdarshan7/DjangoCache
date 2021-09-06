@@ -54,11 +54,11 @@ MIDDLEWARE = [
 ]
 
 # Cache config
-CACHE_MIDDLEWARE_SECONDS = 30
+# CACHE_MIDDLEWARE_SECONDS = 30
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'unique-snowflake',
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'my_cache_table',
     }
 }
 
