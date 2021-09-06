@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app import views
+from django.views.decorators.cache import cache_page
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('', cache_page(10)(views.home), name='cache-home'),
+    path('home/', views.home, name='home'),
     path('contact', views.contact, name='contact'),
 ]
