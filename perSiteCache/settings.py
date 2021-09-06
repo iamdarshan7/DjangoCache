@@ -57,8 +57,8 @@ MIDDLEWARE = [
 CACHE_MIDDLEWARE_SECONDS = 30
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'app_cache',
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/home/darshan/Job/PractiseProject/perSiteCache/cache',
     }
 }
 
